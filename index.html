@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заколичнов Денис Петрович</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="images/myphoto.jpg" alt="Фото Дениса Петровича">
+        <h1>Заколичнов Денис Петрович</h1>
+    </header>
+
+    <main class="content">
+        <section class="intro">
+            <p>Всем кто зашёл на сайт – Салам Алейкум! Являюсь студентом 4го курса, на данный момент изучаю мобильную разработку.</p>
+            <p>Мои проекты: <a href="#gorilla">Телеграм бот "Gorilla"</a>, ИС для команд переводчиков, Телеграм бот для продажи телефонов</p>
+        </section>
+
+        <section id="gorilla" class="project">
+            <h2>Телеграм бот "Gorilla"</h2>
+            <p>Gorilla – Мой первый опыт работы с телеграмм ботами. Выбором этой темы послужила потребность в навыках более глубокого познания алгоритмов и изучения работ API.</p>
+            <img src="images/bot.jpg" alt="Пример работы бота">
+        </section>
+
+        <section class="project">
+            <h2>ИС для команд переводчиков</h2>
+            <p>ИС для команд переводчиков – программа для переводчиков манги/книг, которая позволяет вести учёт работников, даты выхода глав, учёт денег и т.д.</p>
+            <img src="images/IS.jpg" alt="ИС для команд переводчиков">
+        </section>
+
+        <section class="project">
+            <h2>Телеграмм бот для продажи телефонов</h2>
+            <p>Телеграмм бот для продажи телефонов – бот, позволяет работникам и покупателям без лишней мороки покупать и искать телефоны.</p>
+            <img src="images/notfound.jpg" alt="Нет фото">
+        </section>
+
+        <section class="achievements">
+            <h2>Личные достижения</h2>
+            <p>Считаю главным достижением очень хороший подарок, сделанный мной подруге – билеты на концерт её любимого исполнителя и присутствие лично на нём.</p>
+            <img src="images/concert.jpg" alt="Концерт">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2>Связь со мной</h2>
+        <form id="contactForm" action="/send_message" method="POST">
+            <label for="phone">Номер телефона:</label>
+            <input type="text" id="phone" name="phone" required></textarea>
+            
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Отправить</button>
+        </form>
+        <div class="social-links">
+            <h2>Социальные сети</h2>
+            <a href="https://vk.com/resmko" target="_blank">
+                <img src="images/vk.jpg" alt="VK">
+            </a>
+            <a href="https://github.com/Resmko99" target="_blank">
+                <img src="images/github.jpg" alt="GitHub">
+            </a>
+            <a href="https://t.me/lyblysvoegoxomaka" target="_blank">
+                <img src="images/tg.jpg" alt="Telegram">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
