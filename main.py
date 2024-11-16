@@ -1,29 +1,20 @@
-from flask import Flask, request, render_template, redirect, url_for, flash
-from flask_cors import CORS
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-CORS(app)
-app.secret_key = 'supersecretkey'
-
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 @app.route('/send_message', methods=['POST'])
 def send_message():
-    phone = request.form.get('phone')
-    message = request.form.get('message')
+    phone = request.json.get('phone')
+    message = request.json.get('message')
 
     if not phone or not message:
-        flash('Все поля обязательны для заполнения!')
-        return redirect(url_for('index'))
+        return jsonify({'error': 'Все поля обязательны для заполнения!'}), 400
 
-    # Здесь добавьте код для обработки данных (например, отправка на email или в Telegram)
+    # Здесь можно добавить код для отправки данных (например, в Telegram или на email)
     print(f'Номер телефона: {phone}')
     print(f'Сообщение: {message}')
 
-    flash('Сообщение успешно отправлено!')
-    return redirect(url_for('index'))
+    return jsonify({'success': 'Сообщение успешно отправлено!'}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
