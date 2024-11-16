@@ -1,6 +1,8 @@
 from flask import Flask, request, render_template, redirect, url_for, flash
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.secret_key = 'supersecretkey'
 
 @app.route('/')
